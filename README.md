@@ -9,4 +9,4 @@ Los datos que obtiene son:
 
 Las lecturas se realizan cada 10 segundos.
 
-Un script en Python se encarga de enviar los datos entregados por el Arduino a la aplicación Web, que se encarga de mostrar el Chat.
+Un script en Python se encarga de estructurar los mensajes usando los datos entregados por el Arduino y los envía a la aplicación Web, que se encarga de mostrar el Chat.
