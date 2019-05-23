@@ -1,0 +1,64 @@
+USE [b021mx]
+GO
+/****** Object:  Table [dbo].[t021001_Planta]    Script Date: 22/05/2019 08:31:33 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[t021001_Planta](
+	[idPlanta] [smallint] IDENTITY(1,1) NOT NULL,
+	[nbPlanta] [varchar](50) NOT NULL,
+	[txDescripcion] [varchar](200) NOT NULL,
+	[idUbicacion] [smallint] NOT NULL,
+ CONSTRAINT [PK_t021001_Planta] PRIMARY KEY CLUSTERED 
+(
+	[idPlanta] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[t021002_Ubicacion]    Script Date: 22/05/2019 08:31:33 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[t021002_Ubicacion](
+	[idUbicacion] [smallint] IDENTITY(1,1) NOT NULL,
+	[nbUbicacion] [varchar](200) NOT NULL,
+ CONSTRAINT [PK_t021002_Ubicacion] PRIMARY KEY CLUSTERED 
+(
+	[idUbicacion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[t021300_Mensaje]    Script Date: 22/05/2019 08:31:33 p. m. ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[t021300_Mensaje](
+	[idMensaje] [smallint] IDENTITY(1,1) NOT NULL,
+	[idFrom] [smallint] NOT NULL,
+	[idReplyTo] [smallint] NULL,
+	[txMensaje] [varchar](200) NOT NULL,
+	[fhMensaje] [datetime] NOT NULL,
+ CONSTRAINT [PK_t021300_Mensaje] PRIMARY KEY CLUSTERED 
+(
+	[idMensaje] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
